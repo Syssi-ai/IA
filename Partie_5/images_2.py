@@ -1,3 +1,6 @@
+import numpy as np
+import matplotlib.pyplot as plt
+
 # What happens when we change pixel values?
 fig, axes = plt.subplots(1, 3, figsize=(10, 3))
 
