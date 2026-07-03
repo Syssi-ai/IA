@@ -22,6 +22,19 @@ axes[2].imshow(img_small)
 axes[2].set_title("64 × 64")
 axes[2].axis('off')
 
-plt.suptitle("The model always gets the same size input!", fontsize=15)
+#plt.suptitle("The model always gets the same size input!", fontsize=15)
+#plt.tight_layout()
+#plt.show()
+
+# Convert to grayscale
+img_gray = img.convert('L')    # 'L' = luminance = grayscale
+
+fig, (ax1, ax2) = plt.subplots(2, 1, figsize=(5, 8))
+ax1.imshow(img)
+ax1.set_title(f"RGB — shape: {np.array(img).shape}")
+ax1.axis('off')
+ax2.imshow(img_gray, cmap='gray')
+ax2.set_title(f"Grayscale — shape: {np.array(img_gray).shape}")
+ax2.axis('off')
 plt.tight_layout()
 plt.show()
