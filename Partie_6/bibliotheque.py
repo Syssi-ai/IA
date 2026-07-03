@@ -23,3 +23,10 @@ print("Array shape:", img_array.shape)
 print("Data type:", img_array.dtype)    # uint8 = integers from 0 to 255
 print("Min pixel value:", img_array.min())
 print("Max pixel value:", img_array.max())
+
+# Look at a tiny patch of pixel values (top-left 5x5 corner)
+print("Top-left 5x5 pixels (R values only):")
+print(img_array[:5, :5, 0])    # row 0-4, col 0-4, Red channel
+
+print("\nOne specific pixel at row 100, col 100:")
+print("[R, G, B] =", img_array[100, 100])    # [R, G, B] values
