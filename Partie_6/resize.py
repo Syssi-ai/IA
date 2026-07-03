@@ -38,3 +38,18 @@ ax2.set_title(f"Grayscale — shape: {np.array(img_gray).shape}")
 ax2.axis('off')
 plt.tight_layout()
 plt.show()
+
+
+# Normalise pixel values from 0-255 to 0-1
+img_array = np.array(img_small)           # shape: (64, 64, 3)
+img_norm  = img_array / 255.0             # divide every pixel by 255
+
+print("Before normalisation:")
+print("  dtype:", img_array.dtype)
+print("  min:", img_array.min(), " max:", img_array.max())
+
+print("\nAfter normalisation:")
+print("  dtype:", img_norm.dtype)
+print("  min:", img_norm.min().round(6), " max:", img_norm.max().round(5))
+
+print("\nShape stays the same:", img_norm.shape)
